@@ -1,0 +1,7 @@
+<h2>Pokémons Capturados</h2>
+<ul>
+  <li *ngFor="let pokemon of capturedPokemons">
+    <img [src]="pokemon.sprite" alt="{{ pokemon.name }}">
+    {{ pokemon.name }}
+  </li>
+</ul>

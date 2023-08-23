@@ -56,4 +56,6 @@ func main() {
 	http.HandleFunc("/pokemon/", pokemonHandler)
 	fmt.Println("Server is running on :8080")
 	http.ListenAndServe(":8080", nil)
+
+	// Exemplo: http://localhost:8080/pokemon/Paras
 }
