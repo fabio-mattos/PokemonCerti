@@ -13,17 +13,11 @@ Os pokemons capturados são automaticamente mostrados na lista de pokemons captu
 
 ## Como executar o backend
 
-Temos duas opções de backend uma em Golang e outra em Node.js.
+Backend desenvolvido  em Golang.
 Para executar o banckend em golang:
  # 1) Com o Golang instalado no computado
      na pasta \PokemonCerti\BackendGolang digite:
         go run main.go
-
-Para executar o banckend em Node.js:
-  # 2) Com o node.js  instalado no computado
-     na pasta PokemonCerti\BackendNodeJs digite:
-        node pokemon_server.js
-
 
   Um exemplo de uso do backend é: 
     Exemplo de uso: http://localhost:8080/pokemon/Paras

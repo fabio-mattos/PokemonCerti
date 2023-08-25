@@ -52,8 +52,25 @@ func pokemonHandler(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(pokemon)
 }
 
+func enableCORS(w *http.ResponseWriter) {
+	(*w).Header().Set("Access-Control-Allow-Origin", "http://localhost:4200")
+	(*w).Header().Set("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE")
+	(*w).Header().Set("Access-Control-Allow-Headers", "Content-Type, Authorization")
+}
+
+func corsMiddleware(next http.HandlerFunc) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+
+		enableCORS(&w)
+		if r.Method == "OPTIONS" {
+			return
+		}
+		next(w, r)
+	}
+}
+
 func main() {
-	http.HandleFunc("/pokemon/", pokemonHandler)
+	http.HandleFunc("/pokemon/", corsMiddleware(pokemonHandler))
 	fmt.Println("Server is running on :8080")
 	http.ListenAndServe(":8080", nil)
 

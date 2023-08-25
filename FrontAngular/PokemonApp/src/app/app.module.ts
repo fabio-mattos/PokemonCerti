@@ -6,19 +6,19 @@ import { AppComponent } from './app.component';
 import { PokemonInputComponent } from './pokemon-input/pokemon-input.component';
 import { CapturedPokemonListComponent } from './captured-pokemon-list/captured-pokemon-list.component';
 import { FormsModule } from '@angular/forms';
-import { FabioComponent } from './fabio/fabio.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     PokemonInputComponent,
-    CapturedPokemonListComponent,
-    FabioComponent
+    CapturedPokemonListComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,13 @@
 <h2>Pokemons Capturados</h2>
-<ul>
+
+<div *ngIf="capturedPokemons.length === 0">
+  <p>Nenhum Pokemon capturado ainda.</p>
+</div>
+
+<ul *ngIf="capturedPokemons.length > 0">
   <li *ngFor="let pokemon of capturedPokemons">
-    <img [src]="pokemon.sprite" alt="{{ pokemon.name }}">
-    {{ pokemon.name }}
+    <td>Id:  {{ pokemon.id }}</td>
+    <td>Nome:  {{ pokemon.name }}</td>
+    <td>Imagem:  <img [src]="pokemon.sprite" alt="{{ pokemon.name }}"></td>
   </li>
 </ul>
