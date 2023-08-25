@@ -15,7 +15,7 @@ Os pokemons capturados são automaticamente mostrados na lista de pokemons captu
 
 Backend desenvolvido  em Golang.
 Para executar o banckend em golang:
- # 1) Com o Golang instalado no computado
+ ## 1) Com o Golang instalado no computado
      na pasta \PokemonCerti\BackendGolang digite:
         go run main.go
 
