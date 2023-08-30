@@ -7,12 +7,14 @@ import { PokemonInputComponent } from './pokemon-input/pokemon-input.component';
 import { CapturedPokemonListComponent } from './captured-pokemon-list/captured-pokemon-list.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PokemonInputComponent,
-    CapturedPokemonListComponent
+    CapturedPokemonListComponent,
+    PokemonListComponent
   ],
   imports: [
     BrowserModule,

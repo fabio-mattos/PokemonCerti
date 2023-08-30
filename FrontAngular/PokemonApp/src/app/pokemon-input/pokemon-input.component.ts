@@ -3,7 +3,7 @@ import { PokemonService } from '../pokemon.service';
 
 @Component({
   selector: 'app-pokemon-input',
-  templateUrl: './pokemon-input.component.html',
+  templateUrl: './pokemon-input.component.html',  
 })
 export class PokemonInputComponent {
   pokemonName: string = '';
